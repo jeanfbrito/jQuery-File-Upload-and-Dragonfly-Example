@@ -74,6 +74,7 @@ GEM
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -136,6 +137,7 @@ DEPENDENCIES
   dragonfly (~> 0.9.15)
   jquery-fileupload-rails
   jquery-rails
+  pg
   rack-cache
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
