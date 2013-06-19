@@ -24,6 +24,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'capistrano'
+
 gem 'jquery-rails'
 gem 'jquery-fileupload-rails'
 gem 'twitter-bootstrap-rails'
