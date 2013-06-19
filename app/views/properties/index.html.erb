@@ -7,7 +7,7 @@
                 <span class="btn btn-success fileinput-button">
                     <i class="icon-plus icon-white"></i>
                     <span>Add files...</span>
-                    <%= f.file_field :avatar %>
+                    <%= f.file_field :avatar, :multiple => true %>
                 </span>
                 <button type="submit" class="btn btn-primary start">
                     <i class="icon-upload icon-white"></i>
@@ -116,7 +116,10 @@
 <script type="text/javascript" charset="utf-8">
     $(function () {
         // Initialize the jQuery File Upload widget:
-        $('#fileupload').fileupload();
+        //$('#fileupload').fileupload();
+        $('#fileupload').fileupload({
+            paramName: 'picture[avatar]'
+        });
         // 
         // Load existing files:
         $.getJSON($('#fileupload').prop('action'), function (files) {
