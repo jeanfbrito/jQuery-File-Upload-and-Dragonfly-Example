@@ -1,8 +1,10 @@
 class Picture < ActiveRecord::Base
+  include ActiveModel::ForbiddenAttributesProtection
+
   include Rails.application.routes.url_helpers
   image_accessor :avatar
 
-  attr_accessible :avatar_uid, :avatar_name, :avatar
+  #attr_accessible :avatar_uid, :avatar_name, :avatar
    #one convenient method to pass jq_upload the necessary information
    
   def to_jq_upload

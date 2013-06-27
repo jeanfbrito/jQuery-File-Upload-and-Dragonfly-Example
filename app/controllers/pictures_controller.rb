@@ -6,7 +6,9 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.new(params[:picture])
+    #@picture = Picture.new(params[:picture])
+    @picture = Picture.new params.require(:picture).permit(:avatar, :avatar_uid, :avatar_name)#(params[:picture])
+
     if @picture.save
       respond_to do |format|
         format.html {  
